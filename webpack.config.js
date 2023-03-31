@@ -8,8 +8,6 @@ module.exports = {
         SignupLogin : './Signup-Login/UserFunctions.js',
         resetPassword :"./resetPassword/resetPassword.js",
         homepageElements : "./homePage/homePageElements.js",
-        JobOpeings : './JobOpenings/JobOpenings.js',
-        testAPI : './JobOpenings/JsearchAPI.js'
         // fireBaseint: "/firebaseInitilization.js"
     },
     output:{

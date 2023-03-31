@@ -48,7 +48,6 @@ window.register = function(){
       // Signed in 
       const user = userCredential.user;
       console.log(user.email);
-      writeUserData(usrName,name,email);
       alert("Your account has been created. Welcome to InternXP!");
       location.href = "/src/homePage/homePage";
 
@@ -69,7 +68,12 @@ window.register = function(){
   // alert(email + " " + password);
 }
 
-function writeUserData(usrName, name, email) {
+window.rdAdded = function writeUserData(iusrName, iname, iemail) {
+  const userSignUp = document.querySelector(".usrSignup");
+  const name = userSignUp.name.value;
+  const usrName = userSignUp.userName.value;
+  const email = userSignUp.email.value;
+  const password = userSignUp.password.value;
   console.log("in added")
   const db = getDatabase(app);
   set(ref(db, 'TheStudents/' + usrName), {

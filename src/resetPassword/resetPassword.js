@@ -3,7 +3,7 @@ import { confirmPasswordReset, getAuth, sendPasswordResetEmail, updatePassword }
 
 window.backToindex = function(){
 
-  location.href = "./index";
+  location.href = "/";
 
 }
 window.toResetPage = function(){
@@ -24,7 +24,7 @@ window.sendEmail = function(){
     .then(() => {
 
         alert("Please check your email for the password reset link.");
-        location.href = "/index";
+        location.href = "/";
 
         // Password reset email sent!
         // ..
@@ -78,7 +78,7 @@ window.sendEmail = function(){
     confirmPasswordReset(auth, oobCode, newPassword).then((resp) => {
 
         alert('Your password has been changed. You may now log in with your new password.');
-        window.location.href = '/index';
+        window.location.href = '/';
         // Password reset has been confirmed and new password updated.
   
         // TODO: Display a link back to the app, or sign-in the user directly
